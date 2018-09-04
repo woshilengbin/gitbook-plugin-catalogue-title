@@ -71,7 +71,7 @@ module.exports = {
                             title +=  ' ' +  title_object.title
                         }
 
-                        element.new_title  = "BoyaaIDE 用户手册"
+                        element.new_title  = "BoyaaIDE 用户手册";
                         return element
                     })
                     .then ( element => { //设置新title
