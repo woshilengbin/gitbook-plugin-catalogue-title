@@ -34,7 +34,7 @@ module.exports = {
                 Promise.resolve()
                     .then( () => { //查找html
                         if (element.basename !== 'README') {
-                             element.file_path = path.join(output,element.basename + ".html")
+                             element.file_path = path.join(output,'index' + ".html")
                         }else {
                              element.file_path = path.join(output,'index' + ".html")
                         }
