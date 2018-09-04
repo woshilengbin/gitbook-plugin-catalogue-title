@@ -71,7 +71,7 @@ module.exports = {
                             title +=  ' ' +  title_object.title
                         }
 
-                        element.new_title = title
+                        element.new_title  = "BoyaaIDE 用户手册"
                         return element
                     })
                     .then ( element => { //设置新title
@@ -87,57 +87,7 @@ module.exports = {
                         console.log(element)
                         console.log(err)
                     })
-            })
-           /*
-            _.each(title_array, function(element){
-                //fs.readFileSync()
-                let file_path
-
-                if (element.basename !== 'README') {
-                    file_path = path.join(output,element.basename + ".html")
-                }else {
-                    file_path = path.join(output,'index' + ".html")
-                }
-                 
-
-                fs.readFile(file_path, function(err, data){
-                    if (err) {
-                        console.log(err)
-                        return
-                    }
-                    let content = new String(data),
-                        result = content.match(/<title>(\S+)/),
-                        default_title = result && result[1],
-                        title_object = _.find(title_array, function(element){
-                                    if (element.title === default_title) return true
-                                })
-                        level = title_object && title_object.level,
-                        new_title = default_title
-
-                    while(true){
-                        level = level && level.substring(0, level.lastIndexOf('.'))
-                        title_object = _.find(title_array, function(element){
-                                    if (element.level === level) return true
-                                })
-                        if ( !title_object ) break;
-                        new_title +=  ' ' +  title_object.title
-                    }
-
-                    content =  content.replace(/<title>(\S+)<\/title>/,function(match, p1){
-                        return '<title>' + new_title + ' · ' + book_title + '</title>'
-                    })
-
-                    fs.writeFile(file_path,  content, function(err){
-                        if (err) throw err
-                    } )
-
-
-                    console.log(file_path)
-                    console.log(result&& result[1])
-                    console.log(new_title)
-                    
-                }.bind(null, file_path))
-            })*/
+            }
         }
     }
 };
